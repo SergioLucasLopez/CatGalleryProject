@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CatGallery</title>
+  <style>
+    body{font-family:system-ui;max-width:1100px;margin:40px auto;padding:0 16px}
+    header{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin:16px 0}
+    .card{border:1px solid #eee;border-radius:12px;overflow:hidden;background:#fff}
+    .card img{width:100%;height:220px;object-fit:cover;display:block}
+    .card button{width:100%;padding:8px;border:0;border-top:1px solid #eee;cursor:pointer;background:#fafafa}
+    .bar{display:flex;gap:8px;align-items:center;margin:8px 0}
+    #status{color:#666}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CatGallery</h1>
+    <div class="bar">
+      <select id="breedSelect"><option value="">Todas las razas</option></select>
+      <button id="loadMore">Ver más</button>
+    </div>
+  </header>
+
+  <p id="status" aria-live="polite"></p>
+
+  <h2>Galería</h2>
+  <div id="gallery" class="grid"></div>
+
+  <h2>Favoritos</h2>
+  <div id="favs" class="grid"></div>
+
+  <script src="./js/app.js" defer></script>
+</body>
+</html>
